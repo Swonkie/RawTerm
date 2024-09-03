@@ -6,11 +6,26 @@ Simple to use: first `enableRawMode()`, then call `readChar()` repeatedly to rea
 
 It supports Unicode, including emojis. If you get invalid characters, make sure your terminal is configured to use UTF8 encoding.
 
+## Using Package.swift
+
+```Swift
+// Add to your package dependencies
+.package(url: "https://github.com/Swonkie/RawTerm.git", from: "0.1.0")
+
+// Add to your target dependencies
+"RawTerm"
+
+// Import the module in your code
+import RawTerm
+```
+
 ## Example
 
 A simple spelling aid:
 
 ```Swift
+import RawTerm
+
 @main
 struct Spell {
 
