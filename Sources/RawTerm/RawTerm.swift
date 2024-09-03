@@ -13,9 +13,9 @@ public enum RawTermError: Error {
 
 /// Some common character codes for convenience.
 public struct CharCode {
-	static let TAB = "\u{09}"
-	static let RET = "\u{0d}"
-	static let ESC = "\u{1b}"
+	public static let TAB = "\u{09}"
+	public static let RET = "\u{0d}"
+	public static let ESC = "\u{1b}"
 }
 
 
