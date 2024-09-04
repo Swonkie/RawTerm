@@ -35,13 +35,13 @@ public func readChar() throws -> String {
 
 	// any additional bytes needed for a multibyte character?
 	// https://en.wikipedia.org/wiki/UTF-8#Encoding
-	let n = if buffer[0] >= 0b11110000 { 3 }
+	let n = if buffer[0] < 0b10000000 { 0 }
+	else if buffer[0] >= 0b11110000 { 3 }
 	else if buffer[0] >= 0b11100000 { 2 }
 	else if buffer[0] >= 0b11000000 { 1 }
-	else if buffer[0] >= 0b10000000 {
+	else {
 		throw RawTermError.readError("Found invalid UTF8 sequence")
 	}
-	else { 0 }
 
 	if n > 0 {
 		// read remaining bytes of multibyte character
