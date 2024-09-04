@@ -8,6 +8,9 @@ It supports Unicode, including emojis. If you get invalid characters, make sure 
 
 Don't use the terminal in Xcode or Swift Playgrounds for testing — use a fully functional, standalone terminal.
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSwonkie%2FRawTerm%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Swonkie/RawTerm)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSwonkie%2FRawTerm%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/Swonkie/RawTerm)
+
 ## Using Package.swift
 
 ```Swift
