@@ -6,6 +6,8 @@ Simple to use: first `enableRawMode()`, then call `readChar()` repeatedly to rea
 
 It supports Unicode, including emojis. If you get invalid characters, make sure your terminal is configured to use UTF8 encoding.
 
+Don't use the terminal in Xcode or Swift Playgrounds for testing — use a fully functional, standalone terminal.
+
 ## Using Package.swift
 
 ```Swift
@@ -13,7 +15,7 @@ It supports Unicode, including emojis. If you get invalid characters, make sure 
 .package(url: "https://github.com/Swonkie/RawTerm.git", from: "0.1.0")
 
 // Add to your target dependencies
-"RawTerm"
+.product(name: "RawTerm", package: "RawTerm")
 
 // Import the module in your code
 import RawTerm
